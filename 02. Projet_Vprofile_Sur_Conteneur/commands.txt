@@ -1,0 +1,22 @@
+> cd /c/containerIntro/
+> cd windowsAndMacIntel/
+> ls
+> cat Vagrantfile
+> vagrant up
+> vagrant ssh
+> vagrant halt
+
+> sudo -i
+>  docker compose
+>   mkdir compose
+>   cd compose/
+>   wget https://raw.githubusercontent.com/devopshydclub/vprofile-project/docker/compose/docker-compose.yml
+>  ls
+>  vim docker-compose.yml
+>  docker compose up -d
+>  docker compose ps
+>  docker images
+>  ip addr show
+>  docker compose down
+>  docker system prune -a
+>  history

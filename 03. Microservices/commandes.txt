@@ -1,0 +1,24 @@
+
+$ cd /c/vagrant-vms/containerIntro/
+
+$ vagrant up
+
+
+$ vagrant ssh
+
+vagrant@ubuntu-focal:~$ sudo -i
+root@ubuntu-focal:~# git clone https://github.com/devopshydclub/emartapp.git
+root@ubuntu-focal:~# ls
+root@ubuntu-focal:~# cd emartapp/
+root@ubuntu-focal:~/emartapp# ls
+root@ubuntu-focal:~/emartapp# vim docker-compose.yaml
+root@ubuntu-focal:~/emartapp# docker images
+root@ubuntu-focal:~/emartapp# docker ps -a
+root@ubuntu-focal:~/emartapp# docker compose up -d
+root@ubuntu-focal:~/emartapp# docker compose ps
+root@ubuntu-focal:~/emartapp# docker ps -a
+root@ubuntu-focal:~/emartapp# ip addr show
+#http://192.168.56.82/
+root@ubuntu-focal:~/emartapp# docker compose down
+root@ubuntu-focal:~/emartapp# exit
+vagrant@ubuntu-focal:~$ exit

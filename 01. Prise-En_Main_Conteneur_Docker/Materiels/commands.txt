@@ -1,0 +1,53 @@
+$ ls
+
+$ vagrant up
+
+$ vagrant ssh
+
+vagrant@ubuntu-focal:~$ sudo -i
+
+# Basic Commands
+root@ubuntu-focal:~# systemctl status docker
+
+root@ubuntu-focal:~# docker run hello-world
+
+root@ubuntu-focal:~# docker images
+
+root@ubuntu-focal:~# docker ps
+
+root@ubuntu-focal:~# docker ps -a
+
+root@ubuntu-focal:~# docker run --name web01 -d -p 9080:80 nginx
+
+root@ubuntu-focal:~# docker ps
+root@ubuntu-focal:~# docker inspect web01
+
+root@ubuntu-focal:~# ip addr show
+root@ubuntu-focal:~# curl http://127.17.0.1:80
+root@ubuntu-focal:~# docker ps
+
+# Building an Image
+
+root@ubuntu-focal:~# mkdir images
+root@ubuntu-focal:~# cd images/
+root@ubuntu-focal:~/images# vim Dockerfile
+root@ubuntu-focal:~/images# docker build -t testimg .
+root@ubuntu-focal:~/images# docker images
+
+
+# Run a container
+root@ubuntu-focal:~/images# docker run -d -P testimg
+dockerroot@ubuntu-focal:~/images# docker ps
+
+
+# Go to browser enter IP:HostPort
+root@ubuntu-focal:~/images# ip addr show
+root@ubuntu-focal:~/images# docker ps
+
+# CLEAN UP
+root@ubuntu-focal:~/images# docker stop web01 distracted_hypatia
+root@ubuntu-focal:~/images# docker ps -a
+root@ubuntu-focal:~/images# docker rm distracted_hypatia web01 elated_sutherland
+root@ubuntu-focal:~/images# docker images
+root@ubuntu-focal:~/images# docker rmi 232ee9312871 e784f4560448 d2c94e258dcb
+
